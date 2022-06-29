@@ -1,33 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib.cm as cm
 import math
-import pickle as pkl
-
-
-def pickle(filename, data):
-    pikd = open(filename, 'wb')
-    pkl.dump(data, pikd)
-    pikd.close()
-
-
-def unpickle(filename):
-    pikd = open(filename, 'rb')
-    data = pkl.load(pikd)
-    pikd.close()
-    return data
-
-
-def img_arr(arr, x, y):
-    return np.reshape([[f,f,f] for f in arr], (x,y,3))
-
-
-def show_img(img, title=''):
-    rgb_img = img_arr(img.flatten(), 28, 28)
-    plt.imshow(rgb_img, cmap=cm.gray, vmin=0, vmax=1)
-    plt.tight_layout()
-    plt.title(title)
-    plt.show()
 
 
 def show_img_grid(imgs, title=''):

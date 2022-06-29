@@ -4,7 +4,6 @@ import pickle as pkl
 from tensorflow.keras import backend as K
 
 
-
 class DNN_Bin_Classifier:
     # dim_layers includes the dimension of the input layer
     def __init__(self, dim_layers=None, filename=''):
